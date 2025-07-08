@@ -1,0 +1,307 @@
+MatchId;Round;Host;Guest;Date;Hour;Attendance;HostGoals;GuestGoals
+1;1;Górnik Zabrze;Radomiak Radom;23 lipca;15:00;16543;0;2
+2;1;Korona Kielce;Śląsk Wrocław;24 lipca;19:00;12266;1;1
+3;1;Legia Warszawa;ŁKS Łódź;21 lipca;20:30;26584;3;0
+4;1;Piast Gliwice;Lech Poznań;22 lipca;20:00;5784;1;2
+5;1;Raków Częstochowa;Jagiellonia Białystok;22 lipca;17:30;5346;3;0
+6;1;Stal Mielec;Cracovia;22 lipca;15:00;6392;2;2
+7;1;Warta Poznań;Pogoń Szczecin;21 lipca;18:00;3274;0;1
+8;1;Widzew Łódź;Puszcza Niepołomice;23 lipca;20:00;17098;3;2
+9;1;Zagłębie Lubin;Ruch Chorzów;23 lipca;17:30;8763;2;1
+10;2;Cracovia;Legia Warszawa;20 grudnia;19:00;8093;2;0
+11;2;Jagiellonia Białystok;Puszcza Niepołomice;29 lipca;17:30;8478;4;1
+12;2;Korona Kielce;Raków Częstochowa;13 marca;18:30;7747;0;2
+13;2;Lech Poznań;Radomiak Radom;30 lipca;17:30;23198;2;0
+14;2;Pogoń Szczecin;Widzew Łódź;30 lipca;20:00;20024;2;1
+15;2;Ruch Chorzów;ŁKS Łódź;28 lipca;20:30;9736;2;0
+16;2;Stal Mielec;Piast Gliwice;30 lipca;15:00;5526;0;0
+17;2;Śląsk Wrocław;Zagłębie Lubin;29 lipca;20:00;16928;1;2
+18;2;Warta Poznań;Górnik Zabrze;29 lipca;15:00;2079;2;0
+19;3;Górnik Zabrze;Piast Gliwice;5 sierpnia;17:30;16697;0;0
+20;3;Jagiellonia Białystok;Widzew Łódź;4 sierpnia;18:00;11547;2;1
+21;3;Legia Warszawa;Ruch Chorzów;6 sierpnia;20:00;25247;3;0
+22;3;ŁKS Łódź;Korona Kielce;4 sierpnia;20:30;10428;2;1
+23;3;Puszcza Niepołomice;Stal Mielec;7 sierpnia;19:00;2898;1;0
+24;3;Radomiak Radom;Cracovia;5 sierpnia;20:00;8279;0;1
+25;3;Raków Częstochowa;Warta Poznań;5 sierpnia;15:00;5236;2;2
+26;3;Zagłębie Lubin;Lech Poznań;6 sierpnia;17:30;15813;1;1
+27;3;Pogoń Szczecin;Śląsk Wrocław;30 sierpnia;18:30;14562;0;2
+28;4;Cracovia;Zagłębie Lubin;11 sierpnia;18:00;8437;2;1
+29;4;Korona Kielce;Górnik Zabrze;12 sierpnia;17:30;11828;0;1
+30;4;Lech Poznań;Jagiellonia Białystok;24 października;18:00;15372;3;3
+31;4;Piast Gliwice;Raków Częstochowa;11 sierpnia;20:30;5455;2;1
+32;4;Pogoń Szczecin;Radomiak Radom;13 sierpnia;15:00;17842;0;2
+33;4;Puszcza Niepołomice;Legia Warszawa;13 sierpnia;17:30;5313;1;1
+34;4;Stal Mielec;Śląsk Wrocław;12 sierpnia;15:00;5207;3;1
+35;4;Warta Poznań;Ruch Chorzów;14 sierpnia;19:00;3458;2;2
+36;4;Widzew Łódź;ŁKS Łódź;12 sierpnia;20:00;17823;1;0
+37;5;Cracovia;Piast Gliwice;21 sierpnia;19:00;8623;1;1
+38;5;Górnik Zabrze;Widzew Łódź;18 sierpnia;20:30;14783;1;1
+39;5;Legia Warszawa;Korona Kielce;20 sierpnia;20:00;20648;1;0
+40;5;ŁKS Łódź;Pogoń Szczecin;20 sierpnia;15:00;10386;1;0
+41;5;Radomiak Radom;Warta Poznań;19 sierpnia;15:00;8405;3;2
+42;5;Raków Częstochowa;Stal Mielec;19 sierpnia;17:30;5255;2;0
+43;5;Ruch Chorzów;Jagiellonia Białystok;19 sierpnia;20:00;9073;0;1
+44;5;Śląsk Wrocław;Lech Poznań;20 sierpnia;17:30;20045;3;1
+45;5;Zagłębie Lubin;Puszcza Niepołomice;18 sierpnia;18:00;5607;1;0
+46;6;Jagiellonia Białystok;Górnik Zabrze;27 sierpnia;17:30;11487;4;1
+47;6;Korona Kielce;Zagłębie Lubin;27 sierpnia;15:00;9727;2;0
+48;6;Lech Poznań;Raków Częstochowa;28 września;20:00;21874;4;1
+49;6;Piast Gliwice;Ruch Chorzów;26 sierpnia;20:00;7138;0;0
+50;6;Pogoń Szczecin;Legia Warszawa;27 września;20:00;19551;3;4
+51;6;Puszcza Niepołomice;ŁKS Łódź;26 sierpnia;17:30;2359;2;1
+52;6;Stal Mielec;Radomiak Radom;25 sierpnia;18:00;5547;2;0
+53;6;Warta Poznań;Cracovia;26 sierpnia;15:00;2073;0;0
+54;6;Widzew Łódź;Śląsk Wrocław;25 sierpnia;20:30;17104;0;2
+55;7;Cracovia;Korona Kielce;2 września;17:30;9613;0;0
+56;7;Lech Poznań;Górnik Zabrze;2 września;20:00;22047;1;1
+57;7;Legia Warszawa;Widzew Łódź;3 września;17:30;27079;3;1
+58;7;ŁKS Łódź;Warta Poznań;1 września;18:00;9763;0;2
+59;7;Radomiak Radom;Piast Gliwice;2 września;15:00;8481;1;1
+60;7;Raków Częstochowa;Puszcza Niepołomice;3 września;20:00;5292;2;0
+61;7;Ruch Chorzów;Stal Mielec;1 września;20:30;8840;1;1
+62;7;Śląsk Wrocław;Jagiellonia Białystok;3 września;12:30;19297;2;1
+63;7;Zagłębie Lubin;Pogoń Szczecin;3 września;15:00;8285;1;0
+64;8;Górnik Zabrze;Ruch Chorzów;15 września;20:30;22508;1;0
+65;8;Jagiellonia Białystok;Radomiak Radom;17 września;12:30;12091;3;2
+66;8;Piast Gliwice;Legia Warszawa;16 września;20:00;7467;1;1
+67;8;Pogoń Szczecin;Korona Kielce;16 września;15:00;12281;3;1
+68;8;Puszcza Niepołomice;Śląsk Wrocław;15 września;18:00;1992;1;3
+69;8;Raków Częstochowa;ŁKS Łódź;16 września;17:30;5488;1;0
+70;8;Stal Mielec;Zagłębie Lubin;18 września;19:00;5532;4;2
+71;8;Warta Poznań;Lech Poznań;17 września;17:30;28419;0;2
+72;8;Widzew Łódź;Cracovia;17 września;15:00;16548;2;0
+73;9;Cracovia;Pogoń Szczecin;23 września;17:30;9017;1;5
+74;9;Korona Kielce;Widzew Łódź;22 września;18:00;12587;1;1
+75;9;Lech Poznań;Stal Mielec;23 września;20:00;15527;2;1
+76;9;Legia Warszawa;Górnik Zabrze;24 września;17:30;24409;2;1
+77;9;ŁKS Łódź;Jagiellonia Białystok;22 września;20:30;11032;2;2
+78;9;Radomiak Radom;Puszcza Niepołomice;23 września;12:30;7523;1;1
+79;9;Ruch Chorzów;Raków Częstochowa;24 września;15:00;9367;3;5
+80;9;Śląsk Wrocław;Piast Gliwice;23 września;15:00;17902;1;0
+81;9;Zagłębie Lubin;Warta Poznań;24 września;12:30;5738;1;0
+82;10;Górnik Zabrze;Zagłębie Lubin;2 października;19:00;10337;0;2
+83;10;Jagiellonia Białystok;Legia Warszawa;1 października;20:00;17892;2;0
+84;10;ŁKS Łódź;Cracovia;30 września;15:00;9572;0;2
+85;10;Piast Gliwice;Widzew Łódź;29 września;20:30;5697;3;2
+86;10;Pogoń Szczecin;Lech Poznań;1 października;17:30;20157;5;0
+87;10;Puszcza Niepołomice;Ruch Chorzów;30 września;17:30;2785;2;2
+88;10;Raków Częstochowa;Radomiak Radom;1 października;15:00;5399;3;0
+89;10;Stal Mielec;Korona Kielce;29 września;18:00;6325;2;3
+90;10;Warta Poznań;Śląsk Wrocław;30 września;20:00;2386;0;1
+91;11;Cracovia;Jagiellonia Białystok;8 października;15:00;8132;2;4
+92;11;Korona Kielce;Warta Poznań;6 października;18:50;9398;1;1
+93;11;Lech Poznań;Puszcza Niepołomice;6 października;20:40;25755;4;1
+94;11;Legia Warszawa;Raków Częstochowa;8 października;17:30;25368;1;2
+95;11;Radomiak Radom;ŁKS Łódź;7 października;12:30;8161;3;0
+96;11;Ruch Chorzów;Pogoń Szczecin;7 października;20:00;9236;0;3
+97;11;Śląsk Wrocław;Górnik Zabrze;8 października;12:30;20775;1;1
+98;11;Widzew Łódź;Stal Mielec;7 października;15:00;16834;1;0
+99;11;Zagłębie Lubin;Piast Gliwice;7 października;17:30;5034;1;1
+100;12;Górnik Zabrze;Raków Częstochowa;22 października;17:30;14789;2;1
+101;12;Jagiellonia Białystok;Zagłębie Lubin;20 października;20:30;8049;3;0
+102;12;Lech Poznań;ŁKS Łódź;21 października;20:00;25026;3;1
+103;12;Piast Gliwice;Pogoń Szczecin;20 października;18:00;4744;0;0
+104;12;Puszcza Niepołomice;Cracovia;21 października;15:00;5834;1;1
+105;12;Radomiak Radom;Korona Kielce;22 października;12:30;8558;1;1
+106;12;Stal Mielec;Warta Poznań;23 października;19:00;4242;0;1
+107;12;Śląsk Wrocław;Legia Warszawa;21 października;17:30;39583;4;0
+108;12;Widzew Łódź;Ruch Chorzów;18 listopada;17:30;17338;2;1
+109;13;Cracovia;Lech Poznań;28 października;17:30;10082;1;1
+110;13;Korona Kielce;Puszcza Niepołomice;27 października;18:00;8580;5;3
+111;13;Legia Warszawa;Stal Mielec;29 października;15:00;23314;1;3
+112;13;ŁKS Łódź;Górnik Zabrze;27 października;20:30;8247;0;5
+113;13;Pogoń Szczecin;Jagiellonia Białystok;28 października;15:00;18641;2;1
+114;13;Raków Częstochowa;Widzew Łódź;29 października;17:30;5500;1;1
+115;13;Ruch Chorzów;Śląsk Wrocław;28 października;20:00;29089;2;2
+116;13;Warta Poznań;Piast Gliwice;28 października;12:30;1274;1;1
+117;13;Zagłębie Lubin;Radomiak Radom;29 października;12:30;4878;2;3
+118;14;Górnik Zabrze;Cracovia;6 listopada;19:00;9409;1;0
+119;14;Jagiellonia Białystok;Stal Mielec;3 listopada;20:30;8921;4;0
+120;14;Lech Poznań;Ruch Chorzów;4 listopada;20:00;24086;2;0
+121;14;Piast Gliwice;Korona Kielce;3 listopada;18:00;3402;0;0
+122;14;Puszcza Niepołomice;Pogoń Szczecin;4 listopada;15:00;1992;0;2
+123;14;Radomiak Radom;Legia Warszawa;5 listopada;17:30;8569;0;1
+124;14;Raków Częstochowa;Zagłębie Lubin;5 listopada;15:00;5148;5;0
+125;14;Śląsk Wrocław;ŁKS Łódź;5 listopada;12:30;22081;2;1
+126;14;Widzew Łódź;Warta Poznań;4 listopada;17:30;17794;0;1
+127;15;Cracovia;Śląsk Wrocław;10 listopada;20:30;6239;0;1
+128;15;Korona Kielce;Jagiellonia Białystok;11 listopada;20:00;10859;2;2
+129;15;Legia Warszawa;Lech Poznań;12 listopada;17:30;29028;0;0
+130;15;ŁKS Łódź;Piast Gliwice;11 listopada;15:00;7921;3;3
+131;15;Pogoń Szczecin;Raków Częstochowa;12 listopada;15:00;19247;1;1
+132;15;Ruch Chorzów;Radomiak Radom;13 listopada;19:00;12783;0;0
+133;15;Stal Mielec;Górnik Zabrze;12 listopada;12:30;5665;2;1
+134;15;Warta Poznań;Puszcza Niepołomice;10 listopada;18:00;1475;0;2
+135;15;Zagłębie Lubin;Widzew Łódź;11 listopada;17:30;7619;1;1
+136;16;Jagiellonia Białystok;Piast Gliwice;24 listopada;20:30;8466;0;0
+137;16;Lech Poznań;Widzew Łódź;26 listopada;17:30;25811;1;3
+138;16;Legia Warszawa;Warta Poznań;25 listopada;20:00;25656;2;2
+139;16;ŁKS Łódź;Zagłębie Lubin;24 listopada;18:00;6473;0;2
+140;16;Pogoń Szczecin;Stal Mielec;25 listopada;17:30;15183;2;3
+141;16;Puszcza Niepołomice;Górnik Zabrze;26 listopada;12:30;2695;2;1
+142;16;Radomiak Radom;Śląsk Wrocław;27 listopada;19:00;6016;0;1
+143;16;Raków Częstochowa;Cracovia;25 listopada;15:00;4976;1;1
+144;16;Ruch Chorzów;Korona Kielce;26 listopada;15:00;13099;1;1
+145;17;Cracovia;Ruch Chorzów;3 grudnia;12:30;6945;4;4
+146;17;Górnik Zabrze;Pogoń Szczecin;1 grudnia;20:30;10239;1;0
+147;17;Korona Kielce;Lech Poznań;2 grudnia;20:00;8763;0;1
+148;17;Stal Mielec;ŁKS Łódź;28 lutego;18:30;5673;1;0
+149;17;Śląsk Wrocław;Raków Częstochowa;3 grudnia;17:30;40000;1;1
+150;17;Warta Poznań;Jagiellonia Białystok;1 grudnia;18:00;1058;1;2
+151;17;Widzew Łódź;Radomiak Radom;2 grudnia;17:30;15467;0;3
+152;17;Zagłębie Lubin;Legia Warszawa;3 grudnia;15:00;6235;0;3
+153;17;Piast Gliwice;Puszcza Niepołomice;12 marca;18:30;3365;1;0
+154;18;Cracovia;Stal Mielec;9 grudnia;17:30;5126;2;2
+155;18;Jagiellonia Białystok;Raków Częstochowa;10 grudnia;17:30;10109;4;2
+156;18;Lech Poznań;Piast Gliwice;10 grudnia;12:30;14104;0;1
+157;18;ŁKS Łódź;Legia Warszawa;10 grudnia;15:00;10087;1;1
+158;18;Pogoń Szczecin;Warta Poznań;8 grudnia;20:30;8801;3;3
+159;18;Puszcza Niepołomice;Widzew Łódź;11 grudnia;19:00;1677;1;0
+160;18;Radomiak Radom;Górnik Zabrze;9 grudnia;15:00;5647;1;1
+161;18;Ruch Chorzów;Zagłębie Lubin;8 grudnia;18:00;10112;2;2
+162;18;Śląsk Wrocław;Korona Kielce;9 grudnia;20:00;12375;0;0
+163;19;Górnik Zabrze;Warta Poznań;15 grudnia;18:00;11987;3;0
+164;19;Legia Warszawa;Cracovia;17 grudnia;17:30;20116;2;0
+165;19;ŁKS Łódź;Ruch Chorzów;17 grudnia;12:30;9048;1;1
+166;19;Piast Gliwice;Stal Mielec;18 grudnia;19:00;3171;3;0
+167;19;Puszcza Niepołomice;Jagiellonia Białystok;16 grudnia;15:00;1731;3;3
+168;19;Radomiak Radom;Lech Poznań;16 grudnia;20:00;6006;2;2
+169;19;Raków Częstochowa;Korona Kielce;17 grudnia;15:00;4816;1;0
+170;19;Widzew Łódź;Pogoń Szczecin;16 grudnia;17:30;16654;1;2
+171;19;Zagłębie Lubin;Śląsk Wrocław;15 grudnia;20:30;7839;1;2
+172;20;Śląsk Wrocław;Pogoń Szczecin;11 lutego;17:30;22232;0;1
+173;20;Cracovia;Radomiak Radom;10 lutego;15:00;8450;6;0
+174;20;Korona Kielce;ŁKS Łódź;12 lutego;19:00;9880;2;1
+175;20;Lech Poznań;Zagłębie Lubin;10 lutego;20:00;18256;2;0
+176;20;Piast Gliwice;Górnik Zabrze;10 lutego;17:30;8035;1;3
+177;20;Ruch Chorzów;Legia Warszawa;9 lutego;20:30;37223;0;1
+178;20;Stal Mielec;Puszcza Niepołomice;9 lutego;18:00;3915;2;1
+179;20;Warta Poznań;Raków Częstochowa;11 lutego;12:30;2016;2;1
+180;20;Widzew Łódź;Jagiellonia Białystok;11 lutego;15:00;17658;1;3
+181;21;Górnik Zabrze;Korona Kielce;19 lutego;19:00;11506;3;1
+182;21;Jagiellonia Białystok;Lech Poznań;17 lutego;17:30;17141;1;2
+183;21;Legia Warszawa;Puszcza Niepołomice;18 lutego;15:00;21341;1;1
+184;21;ŁKS Łódź;Widzew Łódź;18 lutego;17:30;14893;0;2
+185;21;Radomiak Radom;Pogoń Szczecin;16 lutego;18:00;7128;0;4
+186;21;Raków Częstochowa;Piast Gliwice;17 lutego;20:00;5346;3;1
+187;21;Ruch Chorzów;Warta Poznań;17 lutego;15:00;13428;0;0
+188;21;Śląsk Wrocław;Stal Mielec;16 lutego;20:30;12646;0;1
+189;21;Zagłębie Lubin;Cracovia;18 lutego;12:30;4713;1;1
+190;22;Jagiellonia Białystok;Ruch Chorzów;24 lutego;15:00;11098;1;1
+191;22;Korona Kielce;Legia Warszawa;25 lutego;17:30;14141;3;3
+192;22;Lech Poznań;Śląsk Wrocław;24 lutego;17:30;32568;0;0
+193;22;Piast Gliwice;Cracovia;23 lutego;18:00;4413;0;0
+194;22;Pogoń Szczecin;ŁKS Łódź;23 lutego;20:30;17534;4;2
+195;22;Puszcza Niepołomice;Zagłębie Lubin;25 lutego;12:30;1304;2;2
+196;22;Stal Mielec;Raków Częstochowa;24 lutego;20:00;6240;0;0
+197;22;Warta Poznań;Radomiak Radom;26 lutego;19:00;1154;0;0
+198;22;Widzew Łódź;Górnik Zabrze;25 lutego;15:00;17367;3;1
+199;23;Cracovia;Warta Poznań;1 marca;18:00;7601;0;1
+200;23;Górnik Zabrze;Jagiellonia Białystok;2 marca;15:00;14921;2;1
+201;23;Legia Warszawa;Pogoń Szczecin;2 marca;20:00;25126;1;1
+202;23;ŁKS Łódź;Puszcza Niepołomice;3 marca;12:30;6508;3;2
+203;23;Radomiak Radom;Stal Mielec;4 marca;19:00;7070;2;1
+204;23;Raków Częstochowa;Lech Poznań;3 marca;17:30;5500;4;0
+205;23;Ruch Chorzów;Piast Gliwice;1 marca;20:30;15169;3;0
+206;23;Śląsk Wrocław;Widzew Łódź;2 marca;17:30;24117;2;1
+207;23;Zagłębie Lubin;Korona Kielce;3 marca;15:00;4684;1;0
+208;24;Górnik Zabrze;Lech Poznań;9 marca;20:00;21474;0;0
+209;24;Jagiellonia Białystok;Śląsk Wrocław;8 marca;20:30;13480;3;1
+210;24;Korona Kielce;Cracovia;9 marca;15:00;11230;1;1
+211;24;Piast Gliwice;Radomiak Radom;8 marca;18:00;3263;2;3
+212;24;Pogoń Szczecin;Zagłębie Lubin;10 marca;15:00;19543;0;2
+213;24;Puszcza Niepołomice;Raków Częstochowa;9 marca;17:30;2264;1;1
+214;24;Stal Mielec;Ruch Chorzów;10 marca;12:30;5756;3;1
+215;24;Warta Poznań;ŁKS Łódź;11 marca;19:00;2268;0;1
+216;24;Widzew Łódź;Legia Warszawa;10 marca;17:30;17481;1;0
+217;25;Cracovia;Widzew Łódź;16 marca;12:30;10111;2;2
+218;25;Korona Kielce;Pogoń Szczecin;17 marca;12:30;10417;2;2
+219;25;Lech Poznań;Warta Poznań;15 marca;20:30;23361;2;0
+220;25;Legia Warszawa;Piast Gliwice;17 marca;17:30;21853;3;1
+221;25;ŁKS Łódź;Raków Częstochowa;17 marca;15:00;9328;1;1
+222;25;Radomiak Radom;Jagiellonia Białystok;16 marca;15:00;8553;0;2
+223;25;Ruch Chorzów;Górnik Zabrze;16 marca;17:30;38106;1;2
+224;25;Śląsk Wrocław;Puszcza Niepołomice;16 marca;20:00;14811;0;0
+225;25;Zagłębie Lubin;Stal Mielec;15 marca;18:00;4205;0;0
+226;26;Górnik Zabrze;Legia Warszawa;1 kwietnia;20:00;22889;1;3
+227;26;Jagiellonia Białystok;ŁKS Łódź;30 marca;15:00;15007;6;0
+228;26;Piast Gliwice;Śląsk Wrocław;30 marca;17:30;5719;2;2
+229;26;Pogoń Szczecin;Cracovia;30 marca;20:00;19353;3;1
+230;26;Puszcza Niepołomice;Radomiak Radom;1 kwietnia;12:30;1822;1;1
+231;26;Raków Częstochowa;Ruch Chorzów;30 marca;12:30;5500;1;1
+232;26;Stal Mielec;Lech Poznań;1 kwietnia;15:00;6501;0;0
+233;26;Warta Poznań;Zagłębie Lubin;2 kwietnia;19:00;1851;1;1
+234;26;Widzew Łódź;Korona Kielce;1 kwietnia;17:30;17126;3;1
+235;27;Cracovia;ŁKS Łódź;5 kwietnia;18:00;10019;2;2
+236;27;Korona Kielce;Stal Mielec;6 kwietnia;15:00;10715;1;0
+237;27;Lech Poznań;Pogoń Szczecin;7 kwietnia;15:00;34207;1;0
+238;27;Legia Warszawa;Jagiellonia Białystok;7 kwietnia;17:30;27354;1;1
+239;27;Radomiak Radom;Raków Częstochowa;5 kwietnia;20:30;8564;2;1
+240;27;Ruch Chorzów;Puszcza Niepołomice;6 kwietnia;17:30;16352;0;0
+241;27;Śląsk Wrocław;Warta Poznań;6 kwietnia;20:00;14564;2;1
+242;27;Widzew Łódź;Piast Gliwice;7 kwietnia;12:30;17243;1;0
+243;27;Zagłębie Lubin;Górnik Zabrze;8 kwietnia;19:00;4278;1;2
+244;28;Górnik Zabrze;Śląsk Wrocław;14 kwietnia;17:30;19371;2;0
+245;28;Jagiellonia Białystok;Cracovia;14 kwietnia;15:00;18184;1;3
+246;28;ŁKS Łódź;Radomiak Radom;14 kwietnia;12:30;8828;3;2
+247;28;Piast Gliwice;Zagłębie Lubin;15 kwietnia;19:00;3217;2;0
+248;28;Pogoń Szczecin;Ruch Chorzów;12 kwietnia;20:30;18931;5;0
+249;28;Puszcza Niepołomice;Lech Poznań;13 kwietnia;17:30;3410;2;1
+250;28;Raków Częstochowa;Legia Warszawa;13 kwietnia;20:00;5500;1;1
+251;28;Stal Mielec;Widzew Łódź;13 kwietnia;15:00;6343;0;0
+252;28;Warta Poznań;Korona Kielce;12 kwietnia;18:00;2341;1;0
+253;29;Cracovia;Puszcza Niepołomice;21 kwietnia;12:30;11156;0;1
+254;29;Korona Kielce;Radomiak Radom;19 kwietnia;18:00;10495;4;0
+255;29;Legia Warszawa;Śląsk Wrocław;21 kwietnia;17:30;25573;0;0
+256;29;ŁKS Łódź;Lech Poznań;21 kwietnia;15:00;15132;2;3
+257;29;Pogoń Szczecin;Piast Gliwice;20 kwietnia;15:00;18985;0;2
+258;29;Raków Częstochowa;Górnik Zabrze;19 kwietnia;20:30;5200;0;1
+259;29;Ruch Chorzów;Widzew Łódź;20 kwietnia;17:30;49514;2;3
+260;29;Warta Poznań;Stal Mielec;22 kwietnia;19:00;1376;5;2
+261;29;Zagłębie Lubin;Jagiellonia Białystok;20 kwietnia;20:00;4619;1;2
+262;30;Górnik Zabrze;ŁKS Łódź;27 kwietnia;15:00;20253;4;1
+263;30;Jagiellonia Białystok;Pogoń Szczecin;26 kwietnia;20:30;19474;2;2
+264;30;Lech Poznań;Cracovia;28 kwietnia;17:30;40362;0;0
+265;30;Piast Gliwice;Warta Poznań;26 kwietnia;18:00;3536;2;0
+266;30;Puszcza Niepołomice;Korona Kielce;29 kwietnia;19:00;3728;1;1
+267;30;Radomiak Radom;Zagłębie Lubin;28 kwietnia;12:30;8020;3;4
+268;30;Stal Mielec;Legia Warszawa;28 kwietnia;15:00;6514;1;3
+269;30;Śląsk Wrocław;Ruch Chorzów;27 kwietnia;17:30;25053;2;3
+270;30;Widzew Łódź;Raków Częstochowa;27 kwietnia;20:00;17553;0;1
+271;31;Cracovia;Górnik Zabrze;3 maja;18:00;12347;5;0
+272;31;Korona Kielce;Piast Gliwice;5 maja;15:00;12282;1;1
+273;31;Legia Warszawa;Radomiak Radom;5 maja;17:30;26326;0;3
+274;31;ŁKS Łódź;Śląsk Wrocław;4 maja;15:00;7186;1;2
+275;31;Pogoń Szczecin;Puszcza Niepołomice;6 maja;19:00;13525;1;0
+276;31;Ruch Chorzów;Lech Poznań;3 maja;20:30;14718;2;1
+277;31;Stal Mielec;Jagiellonia Białystok;4 maja;20:00;6358;3;2
+278;31;Warta Poznań;Widzew Łódź;5 maja;12:30;3274;2;1
+279;31;Zagłębie Lubin;Raków Częstochowa;4 maja;17:30;5871;2;0
+280;32;Górnik Zabrze;Stal Mielec;11 maja;15:00;21648;1;1
+281;32;Jagiellonia Białystok;Korona Kielce;11 maja;17:30;19850;3;0
+282;32;Lech Poznań;Legia Warszawa;12 maja;17:30;40278;1;2
+283;32;Piast Gliwice;ŁKS Łódź;10 maja;18:00;4083;4;0
+284;32;Puszcza Niepołomice;Warta Poznań;12 maja;12:30;2301;1;0
+285;32;Radomiak Radom;Ruch Chorzów;13 maja;19:00;8013;0;2
+286;32;Raków Częstochowa;Pogoń Szczecin;11 maja;20:00;5400;2;1
+287;32;Śląsk Wrocław;Cracovia;10 maja;20:30;22005;4;0
+288;32;Widzew Łódź;Zagłębie Lubin;12 maja;15:00;17198;1;3
+289;33;Cracovia;Raków Częstochowa;19 maja;12:30;13811;2;0
+290;33;Górnik Zabrze;Puszcza Niepołomice;17 maja;20:30;19552;1;1
+291;33;Korona Kielce;Ruch Chorzów;18 maja;15:00;11324;2;0
+292;33;Piast Gliwice;Jagiellonia Białystok;18 maja;20:00;8045;1;1
+293;33;Stal Mielec;Pogoń Szczecin;17 maja;18:00;6353;0;0
+294;33;Śląsk Wrocław;Radomiak Radom;18 maja;17:30;37767;2;0
+295;33;Warta Poznań;Legia Warszawa;19 maja;15:00;4672;0;1
+296;33;Widzew Łódź;Lech Poznań;19 maja;17:30;17879;1;1
+297;33;Zagłębie Lubin;ŁKS Łódź;20 maja;19:00;4857;2;1
+298;34;Jagiellonia Białystok;Warta Poznań;25 maja;17:30;22021;3;0
+299;34;Lech Poznań;Korona Kielce;25 maja;17:30;20653;1;2
+300;34;Legia Warszawa;Zagłębie Lubin;25 maja;17:30;25153;2;1
+301;34;ŁKS Łódź;Stal Mielec;25 maja;17:30;10212;3;2
+302;34;Pogoń Szczecin;Górnik Zabrze;25 maja;17:30;19843;1;0
+303;34;Puszcza Niepołomice;Piast Gliwice;25 maja;17:30;3369;1;0
+304;34;Radomiak Radom;Widzew Łódź;25 maja;17:30;8570;1;3
+305;34;Raków Częstochowa;Śląsk Wrocław;25 maja;18:20;5500;1;2
+306;34;Ruch Chorzów;Cracovia;25 maja;17:30;18324;2;0

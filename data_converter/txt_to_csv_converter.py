@@ -1,11 +1,6 @@
 from common_classes import *
-
-# sciezka do pliku z danymi txt
-source_path = '../data_txt/ekstraklasa2425.txt'
-
-# sciezka do plikow z danymi csv
-dest_matches_path = '../data_csv/matches.csv'
-dest_goals_path = '../data_csv/goals.csv'
+import os
+import sys
 
 # kontrola poprawnosci odczytu strzelcow bramek
 goalsCounter = 0
@@ -171,6 +166,30 @@ def readMatch():
 
 if __name__ == '__main__':
 
+    # # sciezka do pliku z danymi txt
+    # source_path = '../data_txt/ekstraklasa2425.txt'
+    #
+    # # sciezka do plikow z danymi csv
+    # dest_matches_path = '../data_csv/matches.csv'
+    # dest_goals_path = '../data_csv/goals.csv'
+
+    file_name = input("\nPodaj nazwe pliku znajdujacego sie w data_txt (np \"ekstraklasa2425.txt\"): ")
+
+    source_path = '../data_txt/' + file_name
+
+    if not os.path.isfile(source_path):
+        print("Plik " + source_path + " nie istnieje!")
+        sys.exit(1)
+
+    file_without_ext = file_name.split(".")[0]
+
+    dest_folder_path = '../data_csv/' + file_without_ext
+    if not os.path.exists(dest_folder_path):
+        os.makedirs(dest_folder_path)
+
+    dest_matches_path = dest_folder_path + '/matches.csv'
+    dest_goals_path = dest_folder_path + '/goals.csv'
+
     with open(source_path, 'r', encoding="utf-8") as file:
 
         file_matches = open(dest_matches_path, "w", encoding="utf-8")
@@ -220,6 +239,9 @@ if __name__ == '__main__':
 
             goalsCounter += m1.GuestGoals + m1.HostGoals
 
+            new_goals = m1.GuestGoals + m1.HostGoals
+            new_saves = 0
+
             # zapis goli gospodarzy
             for hg in m1.HostScorers:
                 file_goals.write(str(hg.matchID) + ";")
@@ -229,6 +251,7 @@ if __name__ == '__main__':
                 file_goals.write(str(hg.isOwnGoal) + ";")
                 file_goals.write(str(hg.isHostTeamGoal) + "\n")
                 goalsSaved += 1
+                new_saves += 1
 
             # zapis goli gospodarzy
             for gg in m1.GuestScorers:
@@ -239,6 +262,13 @@ if __name__ == '__main__':
                 file_goals.write(str(gg.isOwnGoal) + ";")
                 file_goals.write(str(gg.isHostTeamGoal) + "\n")
                 goalsSaved += 1
+                new_saves += 1
+
+            if new_goals != new_saves:
+                print("Blad Zapisu goli!")
+                print(m1.Host + " vs. " + m1.Guest)
+                print("ID: " + str(m1.matchID))
+                print("\n")
 
         file_matches.close()
         file_goals.close()
