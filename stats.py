@@ -127,6 +127,35 @@ def calculate_balance_as_host(matches):
     return dict(sorted(result.items(), key=lambda x: x))
 
 
+# bilans jako gosc
+def calculate_balance_as_guest(matches):
+    result = {}
+    for row in matches.itertuples():
+        guest = row.Guest
+        goals_scored = row.GuestGoals
+        goals_conceded = row.HostGoals
+
+        curr_balance = []
+        if guest in result.keys():
+            curr_balance = result.get(guest)
+        else:
+            curr_balance = [0, 0, 0]
+
+        if goals_scored > goals_conceded:
+            curr_balance[0] += 1
+        elif goals_scored == goals_conceded:
+            curr_balance[1] += 1
+        else:
+            curr_balance[2] += 1
+
+        result[guest] = curr_balance
+
+    return dict(sorted(result.items(), key=lambda x: x))
+
+
+
+
+
 
 
 # TODO póżniej do usunięcia
@@ -151,5 +180,6 @@ if __name__ == '__main__':
     )
     print("Najczęstsze wyniki:", count_match_results(matches_data))
     print("Bilans jako gospodarz:", calculate_balance_as_host(matches_data))
+    print("Bilans jako gość:", calculate_balance_as_guest(matches_data))
 
 
