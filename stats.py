@@ -9,11 +9,19 @@ def load_data(folder_path):
     return matches_data
 
 
+# ilość spotkań
+def get_num_of_matches(matches):
+    return matches['MatchId'].count()
+
+
+
+
 # TODO póżniej do usunięcia
 if __name__ == '__main__':
     matches_data = load_data("data_csv/ekstraklasa2425")
-    pd.set_option('display.max_columns', None)
-    print(matches_data)
+    # pd.set_option('display.max_columns', None)
+    # print(matches_data)
+    print("ilość spotkań:", get_num_of_matches(matches_data))
 
 
 
