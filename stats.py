@@ -24,6 +24,11 @@ def get_num_of_rounds(matches):
     return (get_num_of_teams(matches) - 1) * 2
 
 
+# ilość bramek w sezonie
+def get_num_of_goals(matches):
+    return matches['HostGoals'].sum() + matches['GuestGoals'].sum()
+
+
 
 
 # TODO póżniej do usunięcia
@@ -34,6 +39,7 @@ if __name__ == '__main__':
     print("ilość spotkań:", get_num_of_matches(matches_data))
     print("ilość drużyn: ", get_num_of_teams(matches_data))
     print("ilość kolejek: ", get_num_of_rounds(matches_data))
+    print("ilość bramek w seoznie: ", get_num_of_goals(matches_data))
 
 
 
