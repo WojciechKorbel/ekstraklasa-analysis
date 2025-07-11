@@ -38,8 +38,6 @@ def calculate_avg_goals_per_match(matches):
     return num_of_goals / num_of_matches
 
 
-
-
 # srednia strzelonych bramek na mecz dla druzyny / druzyn
 def calculate_avg_scored_goals_per_match_for_teams(matches, teams):
     result = {}
@@ -59,6 +57,28 @@ def calculate_avg_scored_goals_per_match_for_teams(matches, teams):
             result[team] = None
 
     return result
+
+
+# srednia straconych bramek na mecz dla druzyny / druzyn
+def calculate_avg_conceded_goals_per_match_for_teams(matches, teams):
+    result = {}
+    num_of_teams = get_num_of_teams(matches)
+    if num_of_teams == 0:
+        return None
+
+    for team in teams:
+        if team in matches['Host'].values or team in matches['Guest'].values:
+            goals = 0
+            # jako gospodarz
+            goals += matches[matches['Host'] == team]['GuestGoals'].sum()
+            # jako gosc
+            goals += matches[matches['Guest'] == team]['HostGoals'].sum()
+            result[team] = goals / ((num_of_teams - 1) * 2)
+        else:
+            result[team] = None
+
+    return result
+
 
 
 
@@ -81,7 +101,11 @@ if __name__ == '__main__':
         calculate_avg_scored_goals_per_match_for_teams(matches_data,
                     ['Legia Warszawa', 'Pogoń Szczecin', 'xxx'])
     )
-
+    print("średnia straconych bramek na mecz:")
+    print(
+        calculate_avg_conceded_goals_per_match_for_teams(matches_data,
+                    ['Legia Warszawa', 'Pogoń Szczecin', 'xxx'])
+    )
 
 
 
