@@ -135,6 +135,7 @@ def calculate_balance_as_guest(matches):
         goals_scored = row.GuestGoals
         goals_conceded = row.HostGoals
 
+        # TODO zamiana na słownik
         curr_balance = []
         if guest in result.keys():
             curr_balance = result.get(guest)
@@ -163,6 +164,106 @@ def calculate_points_for_match(host_goals, guest_goals):
         return 0, 3
 
 
+# tworzenie tabeli
+def create_table(matches, fromRound = -1, toRound = -1):
+    if fromRound == -1 and toRound == -1:
+        fromRound = 1
+        toRound = get_num_of_rounds(matches)
+    elif fromRound > toRound:
+        return None
+
+    result = {}
+
+    # [0,1,2,3,4,5,6] - mecze, punkty, zwycięstwa, remisy, porażki, bramki zdobyte, bramki stracone
+    # TODO zamiana na slownik
+    for row in matches.itertuples():
+        if row.Round < fromRound or row.Round > toRound:
+            continue
+
+        host = row.Host
+        guest = row.Guest
+        host_goals = row.HostGoals
+        guest_goals = row.GuestGoals
+        host_points, guest_points = calculate_points_for_match(host_goals, guest_goals)
+
+        curr_balance = [0, 0, 0, 0, 0, 0, 0]
+        if host in result.keys():
+            curr_balance = result.get(host)
+
+        curr_balance[0] += 1
+        curr_balance[1] += host_points
+        if host_points == 3:
+            curr_balance[2] += 1
+        elif host_points == 1:
+            curr_balance[3] += 1
+        else:
+            curr_balance[4] += 1
+        curr_balance[5] += host_goals
+        curr_balance[6] += guest_goals
+
+        result[host] = curr_balance
+
+        curr_balance = [0, 0, 0, 0, 0, 0, 0]
+        if guest in result.keys():
+            curr_balance = result.get(guest)
+
+        curr_balance[0] += 1
+        curr_balance[1] += guest_points
+        if guest_points == 3:
+            curr_balance[2] += 1
+        elif guest_points == 1:
+            curr_balance[3] += 1
+        else:
+            curr_balance[4] += 1
+        curr_balance[5] += guest_goals
+        curr_balance[6] += host_goals
+
+        result[guest] = curr_balance
+
+    # TODO uwzglednienie drużyn z tą samą ilością punktów (mecze bezpośrednie)
+    return dict(sorted(result.items(), key=lambda x: x[1][1], reverse=True)) # sortowanie po punktach
+
+
+# wyswietlanie tabeli
+def display_table(table, matches=True, points=True, wins=True, draws=True, loses=True, goal_balance=True):
+    index = 1
+    print(f"{'Lp.':<4} {'Drużyna':<35}", end='')
+
+    if matches:
+        print(f"{'M':<4}", end='')
+    if points:
+        print(f"{'Pkt':<5}", end='')
+    if wins:
+        print(f"{'W':<4}", end='')
+    if draws:
+        print(f"{'R':<4}", end='')
+    if loses:
+        print(f"{'P':<4}", end='')
+    if goal_balance:
+        print(f"{'Bilans':<7}", end='')
+
+    print()
+
+    for key, stats in table.items():
+        print(f"{index:<4} {key:<35}", end='')
+
+        if matches:
+            print(f"{stats[0]:<4}", end='')
+        if points:
+            print(f"{stats[1]:<5}", end='')
+        if wins:
+            print(f"{stats[2]:<4}", end='')
+        if draws:
+            print(f"{stats[3]:<4}", end='')
+        if loses:
+            print(f"{stats[4]:<4}", end='')
+        if goal_balance:
+            print(f"{stats[5]}:{stats[6]:<7}", end='')
+
+        print()
+        index += 1
+
+    print()
 
 
 # TODO póżniej do usunięcia
@@ -188,5 +289,10 @@ if __name__ == '__main__':
     print("Najczęstsze wyniki:", count_match_results(matches_data))
     print("Bilans jako gospodarz:", calculate_balance_as_host(matches_data))
     print("Bilans jako gość:", calculate_balance_as_guest(matches_data))
-
+    table = create_table(matches_data, fromRound=1, toRound=3)
+    print("Tabela po pierszych trzech rundach:")
+    display_table(table)
+    table = create_table(matches_data)
+    print("Tabela na koniec sezonu:")
+    display_table(table)
 
