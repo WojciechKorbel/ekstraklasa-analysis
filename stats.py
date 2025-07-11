@@ -19,6 +19,9 @@ def get_num_of_teams(matches):
     return matches[matches['Round'] == 1]['MatchId'].count() * 2
 
 
+# ilość kolejek
+def get_num_of_rounds(matches):
+    return (get_num_of_teams(matches) - 1) * 2
 
 
 
@@ -30,6 +33,7 @@ if __name__ == '__main__':
     # print(matches_data)
     print("ilość spotkań:", get_num_of_matches(matches_data))
     print("ilość drużyn: ", get_num_of_teams(matches_data))
+    print("ilość kolejek: ", get_num_of_rounds(matches_data))
 
 
 
