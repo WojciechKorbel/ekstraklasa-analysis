@@ -14,6 +14,13 @@ def get_num_of_matches(matches):
     return matches['MatchId'].count()
 
 
+# ilość drużyn
+def get_num_of_teams(matches):
+    return matches[matches['Round'] == 1]['MatchId'].count() * 2
+
+
+
+
 
 
 # TODO póżniej do usunięcia
@@ -22,6 +29,7 @@ if __name__ == '__main__':
     # pd.set_option('display.max_columns', None)
     # print(matches_data)
     print("ilość spotkań:", get_num_of_matches(matches_data))
+    print("ilość drużyn: ", get_num_of_teams(matches_data))
 
 
 
