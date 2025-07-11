@@ -25,7 +25,59 @@ def convert_match_results_to_symbols(matches, team):
                 result.append('W')
     return result
 
+
+# zwraca najdluzsze serie na podstawie symbolicznych wynikow
+def get_longest_series(team_results):
+    if len(team_results) == 0:
+        return {
+            'win': 0,
+            'draw': 0,
+            'lost': 0,
+        }
+
+    longest_wins = 0
+    longest_draws = 0
+    longest_loses = 0
+
+    curr_symbol = team_results[0]
+    curr_len = 1
+    is_first = True
+
+    for symbol in team_results:
+        if is_first:
+            is_first = False
+            continue
+
+        if curr_symbol == symbol:
+            curr_len += 1
+
+        else:
+            if curr_symbol == 'W' and curr_len > longest_wins:
+                longest_wins = curr_len
+            if curr_symbol == 'D' and curr_len > longest_draws:
+                longest_draws = curr_len
+            if curr_symbol == 'L' and curr_len > longest_loses:
+                longest_loses = curr_len
+            curr_symbol = symbol
+            curr_len = 1
+
+    if curr_symbol == 'W' and curr_len > longest_wins:
+        longest_wins = curr_len
+    if curr_symbol == 'D' and curr_len > longest_draws:
+        longest_draws = curr_len
+    if curr_symbol == 'L' and curr_len > longest_loses:
+        longest_loses = curr_len
+
+    return {
+        'win': longest_wins,
+        'draw': longest_draws,
+        'lost': longest_loses,
+    }
+
+
 # TODO do usuniecia pozniej
 if __name__ == '__main__':
     matches_data = load_data("data_csv/ekstraklasa2425")
-    print(convert_match_results_to_symbols(matches_data, "Legia Warszawa"))
+    legia_symbols = convert_match_results_to_symbols(matches_data, "Legia Warszawa")
+    print(legia_symbols)
+    print(get_longest_series(legia_symbols))
