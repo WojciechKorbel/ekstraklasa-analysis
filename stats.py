@@ -29,6 +29,15 @@ def get_num_of_goals(matches):
     return matches['HostGoals'].sum() + matches['GuestGoals'].sum()
 
 
+# srednia bramek na mecz
+def calculate_avg_goals_per_match(matches):
+    num_of_matches = get_num_of_matches(matches)
+    if num_of_matches == 0:
+        return None
+    num_of_goals = get_num_of_goals(matches)
+    return num_of_goals / num_of_matches
+
+
 
 
 # TODO póżniej do usunięcia
@@ -40,6 +49,7 @@ if __name__ == '__main__':
     print("ilość drużyn: ", get_num_of_teams(matches_data))
     print("ilość kolejek: ", get_num_of_rounds(matches_data))
     print("ilość bramek w seoznie: ", get_num_of_goals(matches_data))
+    print("średnia bramek na mecz: ", calculate_avg_goals_per_match(matches_data))
 
 
 
