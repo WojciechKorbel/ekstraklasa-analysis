@@ -80,6 +80,25 @@ def calculate_avg_conceded_goals_per_match_for_teams(matches, teams):
     return result
 
 
+# zlicza wystepowanie danego wyniku
+def count_match_results(matches):
+    result = {}
+    for row in matches.itertuples():
+        # print(row.HostGoals, row.GuestGoals)
+        goals1 = row.HostGoals
+        goals2 = row.GuestGoals
+        if goals2 > goals1:
+            tmp = goals2
+            goals2 = goals1
+            goals1 = tmp
+        match_result = str(goals1) + '+' + str(goals2)
+        if match_result in result.keys():
+            result[match_result] += 1
+        else:
+            result[match_result] = 1
+
+    return dict(sorted(result.items(), key=lambda x: x[1], reverse=True))
+
 
 
 
@@ -106,6 +125,6 @@ if __name__ == '__main__':
         calculate_avg_conceded_goals_per_match_for_teams(matches_data,
                     ['Legia Warszawa', 'Pogoń Szczecin', 'xxx'])
     )
-
+    print("Najczęstsze wyniki:", count_match_results(matches_data))
 
 
