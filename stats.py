@@ -153,7 +153,14 @@ def calculate_balance_as_guest(matches):
     return dict(sorted(result.items(), key=lambda x: x))
 
 
-
+# obliczenie liczby punktow za mecz
+def calculate_points_for_match(host_goals, guest_goals):
+    if host_goals == guest_goals:
+        return 1, 1
+    elif host_goals > guest_goals:
+        return 3, 0
+    else:
+        return 0, 3
 
 
 
