@@ -100,7 +100,31 @@ def count_match_results(matches):
     return dict(sorted(result.items(), key=lambda x: x[1], reverse=True))
 
 
+# bilans jako gospodarz
+def calculate_balance_as_host(matches):
+    result = {}
+    for row in matches.itertuples():
+        host = row.Host
+        goals_scored = row.HostGoals
+        goals_conceded = row.GuestGoals
 
+        # TODO zamiana na słownik
+        curr_balance = []
+        if host in result.keys():
+            curr_balance = result.get(host)
+        else:
+            curr_balance = [0, 0, 0]
+
+        if goals_scored > goals_conceded:
+            curr_balance[0] += 1
+        elif goals_scored == goals_conceded:
+            curr_balance[1] += 1
+        else:
+            curr_balance[2] += 1
+
+        result[host] = curr_balance
+
+    return dict(sorted(result.items(), key=lambda x: x))
 
 
 
@@ -126,5 +150,6 @@ if __name__ == '__main__':
                     ['Legia Warszawa', 'Pogoń Szczecin', 'xxx'])
     )
     print("Najczęstsze wyniki:", count_match_results(matches_data))
+    print("Bilans jako gospodarz:", calculate_balance_as_host(matches_data))
 
 
