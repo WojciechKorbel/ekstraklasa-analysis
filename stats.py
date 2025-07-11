@@ -91,7 +91,7 @@ def count_match_results(matches):
             tmp = goals2
             goals2 = goals1
             goals1 = tmp
-        match_result = str(goals1) + '+' + str(goals2)
+        match_result = str(goals1) + ':' + str(goals2)
         if match_result in result.keys():
             result[match_result] += 1
         else:
