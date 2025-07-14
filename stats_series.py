@@ -75,9 +75,31 @@ def get_longest_series(team_results):
     }
 
 
+# wspolczynnik stabilnosci
+def streak_stability_score(team_results):
+    matches = len(team_results)
+    if matches == 0 or matches == 1:
+        return 0
+
+    changes = 0
+    curr_element = team_results[0]
+    is_first = True
+    for el in team_results:
+        if is_first:
+            is_first = False
+            continue
+
+        if el != curr_element:
+            changes += 1
+            curr_element = el
+
+    return changes / (matches - 1)
+
+
 # TODO do usuniecia pozniej
 if __name__ == '__main__':
     matches_data = load_data("data_csv/ekstraklasa2425")
     legia_symbols = convert_match_results_to_symbols(matches_data, "Legia Warszawa")
     print(legia_symbols)
     print(get_longest_series(legia_symbols))
+    print(streak_stability_score(legia_symbols))
