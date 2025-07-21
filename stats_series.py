@@ -1,3 +1,5 @@
+import math
+
 from stats import load_data
 
 # TODO dokumentacja
@@ -285,6 +287,24 @@ def count_sliding_window(team_results, size):
     return dict(sorted(result.items(), key=lambda x: x[1], reverse=True))
 
 
+# entropia wyników danej drużyny
+def team_entropy(team_results):
+    matches = len(team_results)
+
+    pWin = team_results.count('W') / matches
+    pDraw = team_results.count('D') / matches
+    pLose = team_results.count('L') / matches
+
+    els = []
+    if pWin > 0:
+        els.append(pWin * math.log2(pWin))
+    if pDraw > 0:
+        els.append(pDraw * math.log2(pDraw))
+    if pLose > 0:
+        els.append(pLose * math.log2(pLose))
+    return abs(-sum(els))
+
+
 # TODO do usuniecia pozniej
 if __name__ == '__main__':
     matches_data = load_data("data_csv/ekstraklasa2425")
@@ -305,3 +325,5 @@ if __name__ == '__main__':
     print(get_longest_both_teams_to_score_streak(legia_goals))
 
     print(count_sliding_window(legia_symbols, 3))
+
+    print(team_entropy(legia_symbols)) # najbardziej nieprzewidywalne wyniki: maksymalna entropia: log2(3) = 1,585
