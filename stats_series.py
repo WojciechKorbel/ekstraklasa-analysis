@@ -278,7 +278,7 @@ def count_sliding_window(team_results, size):
             # print(team_results[index + el], end=' ')
         # print()
         curr_window = tuple(curr_window)
-        print(curr_window)
+        # print(curr_window)
         if curr_window in result.keys():
             result[curr_window] += 1
         else:
@@ -305,6 +305,32 @@ def team_entropy(team_results):
     return abs(-sum(els))
 
 
+# najdluzsza seria powyzej x goli
+def get_longest_above_n_goals_streak(team_goals, n, count_scored=False, count_conceded=False):
+    if not count_scored and not count_conceded:
+        return None
+
+    result = 0
+    curr_len = 0
+    for el in team_goals:
+        goals_cnt = 0
+        if count_scored:
+            goals_cnt += el['teamGoals']
+        if count_conceded:
+            goals_cnt += el['opponentGoals']
+
+        if goals_cnt > n:
+            curr_len += 1
+        else:
+            if curr_len > result:
+                result = curr_len
+            curr_len = 0
+
+    if curr_len > result:
+        result = curr_len
+    return result
+
+
 # TODO do usuniecia pozniej
 if __name__ == '__main__':
     matches_data = load_data("data_csv/ekstraklasa2425")
@@ -327,3 +353,5 @@ if __name__ == '__main__':
     print(count_sliding_window(legia_symbols, 3))
 
     print(team_entropy(legia_symbols)) # najbardziej nieprzewidywalne wyniki: maksymalna entropia: log2(3) = 1,585
+
+    print(get_longest_above_n_goals_streak(legia_goals, 1.5, count_scored=True, count_conceded=False))
