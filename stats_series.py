@@ -260,6 +260,31 @@ def get_longest_both_teams_to_score_streak(team_goals):
     return result
 
 
+# występowanie ciągów rezultatów o zadanej długości
+def count_sliding_window(team_results, size):
+    matches = len(team_results)
+    if size <= 0 or size > matches:
+        return None
+    if matches == 0:
+        return 0
+
+    result = {}
+    for index in range(0, matches - size + 1):
+        curr_window = []
+        for el in range(0, size):
+            curr_window.append(team_results[index + el])
+            # print(team_results[index + el], end=' ')
+        # print()
+        curr_window = tuple(curr_window)
+        print(curr_window)
+        if curr_window in result.keys():
+            result[curr_window] += 1
+        else:
+            result[curr_window] = 1
+
+    return dict(sorted(result.items(), key=lambda x: x[1], reverse=True))
+
+
 # TODO do usuniecia pozniej
 if __name__ == '__main__':
     matches_data = load_data("data_csv/ekstraklasa2425")
@@ -278,3 +303,5 @@ if __name__ == '__main__':
     print(get_longest_streak_of_losing_a_goal(legia_goals))
     print(get_longest_streak_without_losing_a_goal(legia_goals))
     print(get_longest_both_teams_to_score_streak(legia_goals))
+
+    print(count_sliding_window(legia_symbols, 3))
