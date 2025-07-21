@@ -75,6 +75,31 @@ def get_longest_series(team_results):
     }
 
 
+# najdłuższa seria bez porażki
+def get_longest_not_lose_series(team_results):
+    matches = len(team_results)
+    if matches == 0 or (matches == 1 and team_results[0] == 'L'):
+        return 0
+    elif matches == 1:
+        return 1
+
+    result = 0
+    curr_len = 0
+    symbols = ['W', 'D']
+    for el in team_results:
+        if el in symbols:
+            curr_len += 1
+        else:
+            if curr_len > result:
+                result = curr_len
+            curr_len = 0
+
+    if curr_len > result:
+        result = curr_len
+
+    return result
+
+
 # wspolczynnik stabilnosci
 def streak_stability_score(team_results):
     matches = len(team_results)
@@ -128,3 +153,4 @@ if __name__ == '__main__':
     print(get_longest_series(legia_symbols))
     print(streak_stability_score(legia_symbols))
     print(streak_points_stability_score(legia_symbols))
+    print(get_longest_not_lose_series(legia_symbols))
