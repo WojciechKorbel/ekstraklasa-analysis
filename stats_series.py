@@ -235,6 +235,31 @@ def get_longest_streak_without_losing_a_goal(team_goals):
     return result
 
 
+# obie drużyny strzelają - najdłuższa seria
+def get_longest_both_teams_to_score_streak(team_goals):
+    matches = len(team_goals)
+    if matches == 0:
+        return 0
+    if matches == 1 and team_goals[0]['teamGoals'] > 0 and team_goals[0]['opponentGoals'] > 0:
+        return 1
+    elif matches == 1:
+        return 0
+
+    result = 0
+    curr_len = 0
+    for el in team_goals:
+        if el['teamGoals'] > 0 and el['opponentGoals'] > 0:
+            curr_len += 1
+        else:
+            if curr_len > result:
+                result = curr_len
+            curr_len = 0
+
+    if curr_len > result:
+        result = curr_len
+    return result
+
+
 # TODO do usuniecia pozniej
 if __name__ == '__main__':
     matches_data = load_data("data_csv/ekstraklasa2425")
@@ -252,3 +277,4 @@ if __name__ == '__main__':
     display_teams_goals(legia_goals)
     print(get_longest_streak_of_losing_a_goal(legia_goals))
     print(get_longest_streak_without_losing_a_goal(legia_goals))
+    print(get_longest_both_teams_to_score_streak(legia_goals))
