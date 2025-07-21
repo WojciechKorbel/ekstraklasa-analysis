@@ -26,6 +26,24 @@ def convert_match_results_to_symbols(matches, team):
     return result
 
 
+# konwersja goli na symbole
+def convert_goals_to_symbols(matches, team):
+    result = []
+    for row in matches.itertuples():
+        match = {}
+        if team == row.Host:
+            match['isHost'] = True
+            match['teamGoals'] = row.HostGoals
+            match['opponentGoals'] = row.GuestGoals
+            result.append(match)
+        elif team == row.Guest:
+            match['isHost'] = False
+            match['teamGoals'] = row.GuestGoals
+            match['opponentGoals'] = row.HostGoals
+            result.append(match)
+    return result
+
+
 # zwraca najdluzsze serie na podstawie symbolicznych wynikow
 def get_longest_series(team_results):
     if len(team_results) == 0:
@@ -173,3 +191,6 @@ if __name__ == '__main__':
     print(get_longest_not_lose_series(legia_symbols))
     print(get_longest_not_win_series(legia_symbols))
     print(get_longest_not_draw_series(legia_symbols))
+
+    legia_goals = convert_goals_to_symbols(matches_data, "Legia Warszawa")
+    print(legia_goals)
