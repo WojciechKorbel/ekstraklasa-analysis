@@ -44,6 +44,15 @@ def convert_goals_to_symbols(matches, team):
     return result
 
 
+# wyświetla gole druzyny:
+def display_teams_goals(team_goals):
+    for el in team_goals:
+        if el['isHost']:
+            print(str(el['teamGoals']) + ":" + str(el['opponentGoals']) + ', Host')
+        else:
+            print(str(el['teamGoals']) + ":" + str(el['opponentGoals']) + ', Guest')
+
+
 # zwraca najdluzsze serie na podstawie symbolicznych wynikow
 def get_longest_series(team_results):
     if len(team_results) == 0:
@@ -180,6 +189,29 @@ def streak_points_stability_score(team_results):
     return changes / (matches - 1)
 
 
+# najdłuższa seria ze stratą gola
+def get_longest_streak_of_losing_a_goal(team_goals):
+    matches = len(team_goals)
+    if matches == 0:
+        return 0
+    if matches == 1 and team_goals[0]['opponentGoals'] > 0:
+        return 1
+
+    result = 0
+    curr_len = 0
+    for el in team_goals:
+        if el['opponentGoals'] > 0:
+            curr_len += 1
+        else:
+            if curr_len > result:
+                result = curr_len
+            curr_len = 0
+
+    if curr_len > result:
+        result = curr_len
+    return result
+
+
 # TODO do usuniecia pozniej
 if __name__ == '__main__':
     matches_data = load_data("data_csv/ekstraklasa2425")
@@ -194,3 +226,5 @@ if __name__ == '__main__':
 
     legia_goals = convert_goals_to_symbols(matches_data, "Legia Warszawa")
     print(legia_goals)
+    display_teams_goals(legia_goals)
+    print(get_longest_streak_of_losing_a_goal(legia_goals))
