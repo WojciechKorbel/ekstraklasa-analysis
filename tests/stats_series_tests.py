@@ -81,6 +81,40 @@ class StatsSeriesTests(unittest.TestCase):
         for index in range(0, len(params)):
             self.assertEqual(get_longest_not_lose_series(params[index]), expected[index])
 
+    # get_longest_not_draw_series
+    def test_get_longest_not_draw_series_with_empty_list(self):
+        param = []
+        expected = 0
+        self.assertEqual(get_longest_not_draw_series(param), expected)
+
+    def test_get_longest_not_draw_series_with_single_element(self):
+        params = [
+            ['W'],
+            ['D'],
+            ['L']
+        ]
+        expected = [1, 0, 1]
+        for index in range(0, len(params)):
+            self.assertEqual(get_longest_not_draw_series(params[index]), expected[index])
+
+    def test_get_longest_not_draw_series_on_the_edge(self):
+        params = [
+            ['L', 'W', 'D'],
+            ['W', 'D', 'D', 'D', 'D', 'D', 'D', 'W', 'L', 'L', 'L']
+        ]
+        expected = [2, 4]
+        for index in range(0, len(params)):
+            self.assertEqual(get_longest_not_draw_series(params[index]), expected[index])
+
+    def test_get_longest_not_draw_series_in_the_middle(self):
+        params = [
+            ['D', 'W', 'L', 'D', 'D', 'D', 'W', 'L', 'W', 'L', 'D', 'D', 'W', 'L', 'W', 'L', 'D'],
+            ['W', 'D', 'L', 'D', 'L', 'W', 'D']
+        ]
+        expected = [4, 2]
+        for index in range(0, len(params)):
+            self.assertEqual(get_longest_not_draw_series(params[index]), expected[index])
+
 
 if __name__ == '__main__':
     unittest.main()
