@@ -47,6 +47,40 @@ class StatsSeriesTests(unittest.TestCase):
         for index in range(0, len(params)):
             self.assertEqual(get_longest_series(params[index]), expected[index])
 
+    # get_longest_not_lose_series
+    def test_get_longest_not_lose_series_with_empty_list(self):
+        param = []
+        expected = 0
+        self.assertEqual(get_longest_not_lose_series(param), expected)
+
+    def test_get_longest_not_lose_series_with_single_element(self):
+        params = [
+            ['W'],
+            ['D'],
+            ['L']
+        ]
+        expected = [1, 1, 0]
+        for index in range(0, len(params)):
+            self.assertEqual(get_longest_not_lose_series(params[index]), expected[index])
+
+    def test_get_longest_not_lose_series_on_the_edge(self):
+        params = [
+            ['L', 'W', 'D'],
+            ['W', 'D', 'D', 'L', 'L', 'L']
+        ]
+        expected = [2, 3]
+        for index in range(0, len(params)):
+            self.assertEqual(get_longest_not_lose_series(params[index]), expected[index])
+
+    def test_get_longest_not_lose_series_in_the_middle(self):
+        params = [
+            ['L', 'W', 'D', 'L', 'L', 'L', 'W', 'D', 'W', 'D', 'L', 'L', 'W', 'D', 'W', 'D', 'L'],
+            ['W', 'L', 'D', 'L', 'D', 'W', 'L']
+        ]
+        expected = [4, 2]
+        for index in range(0, len(params)):
+            self.assertEqual(get_longest_not_lose_series(params[index]), expected[index])
+
 
 if __name__ == '__main__':
     unittest.main()
