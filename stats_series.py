@@ -107,7 +107,7 @@ def get_longest_series(team_results):
 # najdluzsza seria bez ... (pomocnicza)
 def get_longest_series_without_symbols(team_results, symbols):
     matches = len(team_results)
-    if matches == 0 or (matches == 1 and team_results[0] == 'L'):
+    if matches == 0 or (matches == 1 and team_results[0] not in symbols):
         return 0
     elif matches == 1:
         return 1
