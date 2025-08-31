@@ -169,17 +169,86 @@ class TableAnaliseWindow(tk.Frame):
         back_button = tk.Button(self.box1, text="Powrót", command=self.back)
         back_button.pack(pady=20)
 
+        # tabela
+        self.table_labels = ["Poz.", "Drużyna", "Mecze", "Punkty", "Wygrane", "Remisy", "Przegrane", "Gole +", "Gole -"]
+
     # metody
     def generate(self):
-        pass
+        table = {}
+        value = int(self.var.get())
+
+        match value:
+            case TableType.ALL_SEASON_TABLE.value:
+                table = stats.create_table(matches_data)
+                print(table)
+            case TableType.BY_ROUND_TABLE.value:
+                if self.scale_start_var.get() > self.scale_end_var.get():
+                    return # TODO komunikat o bledzie
+                table = stats.create_table(matches_data, fromRound=self.scale_start_var.get(), toRound=self.scale_end_var.get())
+                print(table)
+            case TableType.BY_DATE_TABLE.value:
+                pass
+            case _:
+                print("ERROR!")
+
+        self.clean_table()
+
+        # szerokosci pol
+        field_widths = [4 if len(self.table_labels[0]) <= 4 else len(self.table_labels[0]),
+                        self.get_longest_team_name_len(table) if len(self.table_labels[1]) < self.get_longest_team_name_len(table) else len(self.table_labels[1])]
+        for index in range(0,7): # TODO nie recznie
+            field_widths.append(5 if len(self.table_labels[index + 2]) <= 5 else len(self.table_labels[index + 2]))
+        # longest_team_len = self.get_longest_team_name_len(table)
+
+        # nazwy params
+        for index in range(0, len(self.table_labels)):
+            title = tk.Label(self.box2, text=self.table_labels[index], bg="#abc", width=field_widths[index])
+            title.grid(row=0, column=index, sticky=tk.NW, pady=0)
+
+        # pozycje
+        index = 0
+        for pos in range(len(table)):
+            new_label = tk.Label(self.box2, text=str(index+1) + ".", bg="#cde", width=field_widths[0])
+            new_label.grid(row=index + 1, column=0, sticky=tk.NW, pady=0)
+            index += 1
+
+        # nazwy druzyn
+        index = 0
+        for key in table.keys():
+            new_label = tk.Label(self.box2, text=key, bg="#cde", width=field_widths[1])
+            new_label.grid(row=index+1, column=1, sticky=tk.NW, pady=0)
+            index += 1
+
+        # staty
+        curr_row = 1
+        curr_col = 2
+        for key in table.keys():
+            vals = table[key]
+            curr_col = 2
+            for val in range(len(vals)):
+                new_label = tk.Label(self.box2, text=str(vals[val]), bg="#cde", width=field_widths[curr_col])
+                new_label.grid(row=curr_row, column=curr_col, sticky=tk.NW, pady=0)
+                curr_col += 1
+            curr_row += 1
+
 
     def clean_table(self):
-        pass
+        for widget in self.box2.winfo_children():
+            widget.destroy()
+
+    def get_longest_team_name_len(self, table):
+        maximum = -1
+        for key in table.keys():
+            if len(key) > maximum:
+                maximum = len(key)
+        return maximum
 
     def back(self):
+        # clean
+        self.clean_table()
+
         # przełączenie
         self.controller.show_frame(ChooseStatsWindow)
-
 
 
 class SeasonStatsWindow(tk.Frame):
