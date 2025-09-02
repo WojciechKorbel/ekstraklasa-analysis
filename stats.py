@@ -198,6 +198,17 @@ class Balance:
             self.scored += guest_goals
             self.conceded += host_goals
 
+    def convert_to_list(self):
+        return [
+            self.matches,
+            self.points,
+            self.wins,
+            self.draws,
+            self.loses,
+            self.scored,
+            self.conceded
+        ]
+
 
 # tworzenie nieposortowanej tabeli
 def create_unsorted_table(matches, fromRound=-1, toRound=-1):
