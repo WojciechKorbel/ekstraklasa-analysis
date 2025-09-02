@@ -224,6 +224,7 @@ class TableAnaliseWindow(tk.Frame):
         curr_col = 2
         for key in table.keys():
             vals = table[key]
+            vals = vals.convert_to_list()
             curr_col = 2
             for val in range(len(vals)):
                 new_label = tk.Label(self.box2, text=str(vals[val]), bg="#cde", width=field_widths[curr_col])
